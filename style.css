@@ -42,7 +42,7 @@ body {
     cursor: pointer;
     border-radius: 30px; /* Augmentation des coins arrondis pour un effet plus doux */
     animation: pulse 5s infinite; /* Animation de pulsation légèrement plus rapide et douce */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ajoute une ombre plus prononcée pour un effet 3D */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5); /* Ajoute une ombre plus prononcée pour un effet 3D */
     transition: all 0.4s ease; /* Transition plus douce pour les interactions */
     z-index: 10000; /* Assurer que le bouton est toujours en avant-plan */
 }
@@ -136,7 +136,7 @@ body {
     padding: 15px 30px;
     font-size: 20px;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 30px;
     transition: all 0.3s ease;
     z-index: 10000;
 }
@@ -156,7 +156,7 @@ body {
     padding: 15px 30px;
     font-size: 20px;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 30px;
     transition: all 0.3s ease;
     z-index: 10000;
 }
@@ -185,7 +185,7 @@ body {
     border: 1px solid #888;
     width: 80%;
     max-width: 600px;
-    border-radius: 2px;
+    border-radius: 30px;
 }
 
 .close {
