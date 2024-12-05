@@ -30,15 +30,15 @@ const scoreImg = new Image();
 scoreImg.src = 'police-Photoroom.png'; // Ajout de l'image pour 'SCORE'
 
 // Variables du jeu
-let bird = { x: 50, y: canvas.height / 2, size: 30, velocity: 0, gravity: 0.05, lift: -8 };
+let bird = { x: 50, y: canvas.height / 2, size: 30, velocity: 0, gravity: 0.10, lift: -6 };
 let pipes = [];
 const pipeWidth = 70; 
 const gap = 200;
-const pipeSpeed = 2;
+const pipeSpeed = 1.6;
 let score = 0;
 let gameStarted = false;
 let pipeTimer = 0;
-const pipeInterval = 200; // Temps entre les tuyaux
+const pipeInterval = 250; // Temps entre les tuyaux
 const particles = [];
 let scoreScale = 1; // Variable pour contrôler la taille du score
 let backgroundX = 0; // Position du fond pour l'animation des nuages
