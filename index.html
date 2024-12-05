@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flappy Bird Game</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Précharger les images pour éviter les latences lors de la première utilisation -->
+        <link rel="preload" href="bird.png" as="image">
+        <link rel="preload" href="pipeTop.png" as="image">
+        <link rel="preload" href="pipeBottom.png" as="image">
+        <link rel="preload" href="clouds.png" as="image">
+        <link rel="preload" href="flap.mp3" as="audio">
+        <link rel="preload" href="point.mp3" as="audio">
+        <link rel="preload" href="gameover.mp3" as="audio">
+        <link rel="preload" href="background.mp3" as="audio">
+    
+        <!-- Importer la police Press Start 2P de Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    
+<body>
+    <!-- Écran de démarrage avec le bouton "Jouer" -->
+    <div id="gameStartScreen">
+        <button id="playButton">Play</button>
+    </div>
+
+    <!-- Bouton Leaderboard -->
+    <button id="leaderboardButton" class="btn-leaderboard">Leaderboard</button>
+    
+    <!-- Section Leaderboard -->
+<div id="leaderboardModal" class="leaderboard-modal">
+    <div class="leaderboard-content">
+        <span class="close" id="closeLeaderboard">&times;</span>
+        <h2>Leaderboard</h2>
+        <ul id="leaderboardList"></ul>
+    </div>
+</div>
+
+    
+    <!-- Canevas du jeu -->
+    <canvas id="gameCanvas"></canvas>
+    
+    <!-- Conteneur pour le score -->
+    <div id="scoreContainer">
+        <img id="scoreLabel" src="police-Photoroom.png" alt="Score">
+        <span id="scoreValue">0</span>
+    </div>
+    
+    <!-- Script du jeu -->
+    <script src="script.js"></script>
+</body>
+</html>
+
