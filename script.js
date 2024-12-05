@@ -38,7 +38,7 @@ const pipeSpeed = 2;
 let score = 0;
 let gameStarted = false;
 let pipeTimer = 0;
-const pipeInterval = 220; // Temps entre les tuyaux
+const pipeInterval = 250; // Temps entre les tuyaux
 const particles = [];
 let scoreScale = 1; // Variable pour contrôler la taille du score
 let backgroundX = 0; // Position du fond pour l'animation des nuages
@@ -102,7 +102,7 @@ connectButton.onclick = connectWallet;
 document.body.appendChild(connectButton);
 
 
-// Fonction pour afficher le leaderboard
+
 
 // Réinitialisation du jeu
 function resetGame() {
