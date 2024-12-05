@@ -30,7 +30,7 @@ const scoreImg = new Image();
 scoreImg.src = 'police-Photoroom.png'; // Ajout de l'image pour 'SCORE'
 
 // Variables du jeu
-let bird = { x: 50, y: canvas.height / 2, size: 30, velocity: 0, gravity: 0.30, lift: -8 };
+let bird = { x: 50, y: canvas.height / 2, size: 30, velocity: 0, gravity: 0.10, lift: -8 };
 let pipes = [];
 const pipeWidth = 70; 
 const gap = 200;
