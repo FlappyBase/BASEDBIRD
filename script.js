@@ -30,11 +30,11 @@ const scoreImg = new Image();
 scoreImg.src = 'police-Photoroom.png'; // Ajout de l'image pour 'SCORE'
 
 // Variables du jeu
-let bird = { x: 50, y: canvas.height / 2, size: 30, velocity: 0, gravity: 0.10, lift: -8 };
+let bird = { x: 50, y: canvas.height / 2, size: 30, velocity: 0, gravity: 0.05, lift: -8 };
 let pipes = [];
 const pipeWidth = 70; 
 const gap = 200;
-const pipeSpeed = 2;
+const pipeSpeed = 1;
 let score = 0;
 let gameStarted = false;
 let pipeTimer = 0;
@@ -282,7 +282,7 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
-// Fonction pour générer un faux leaderboard
+// Fonction pour générer un  leaderboard
 function generateFakeLeaderboard() {
     const fakeScores = [];
     for (let i = 0; i < 5; i++) {
@@ -294,7 +294,7 @@ function generateFakeLeaderboard() {
     return fakeScores;
 }
 
-// Générer un faux leaderboard au démarrage du jeu
+// Générer un leaderboard au démarrage du jeu
 let fakeLeaderboard = generateFakeLeaderboard();
 
 // Mise à jour du leaderboard toutes les heures

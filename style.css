@@ -60,7 +60,7 @@ body {
 }
 
 #playButton:hover {
-    background: linear-gradient(135deg, #006dff, #006dff); /* Change le dégradé lors du survol pour une meilleure visibilité */
+    background: linear-gradient(135deg, #006dff, #1e90ff); /* Change le dégradé lors du survol pour une meilleure visibilité */
     transform: scale(1.1); /* Légère augmentation de la taille au survol */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Accentue l'ombre au survol pour donner plus de profondeur */
 }
