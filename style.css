@@ -78,7 +78,7 @@ body {
 #scoreDisplay {
     font-family: 'Press Start 2P', cursive; /* Police pixelisée */
     font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre pour le texte */
+    text-shadow: Opx 0px 0px rgba(0, 0, 0, 0.5); /* Ombre pour le texte */
     transition: all 0.3s ease;  /* Animation douce */
     color: black;  /* Couleur noire */
     z-index: 12; /* Assure-toi que le score est au-dessus du canevas */

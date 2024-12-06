@@ -242,12 +242,10 @@ function drawScore() {
 
     // Ajout d'une ombre au texte
     
-    ctx.shadowBlur = 0;
-    ctx.shadowOffsetX = 0;
-    ctx.shadowOffsetY = 0;
+    
 
-    ctx.strokeStyle = '';
-    ctx.strokeText(score, 0, 0);
+    
+    
     ctx.fillText(score, 160, 80);
 
     if (scoreScale > 1) {
