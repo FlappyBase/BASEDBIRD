@@ -51,6 +51,19 @@ window.addEventListener('resize', () => {
     resetGame();
 });
 
+// Gestionnaire pour redimensionner le canvas (ajustement mobile)
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Ajuster la position initiale de l'oiseau après le redimensionnement
+    bird.x = 50;
+    bird.y = canvas.height / 2;
+
+    resetGame();
+});
+
+
 // Gestion du saut
 window.addEventListener('keydown', (e) => {
     if (e.code === 'Space') {
@@ -68,6 +81,24 @@ window.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// Gestion du saut sur mobile (événements tactiles)
+window.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Empêcher le comportement par défaut
+    bird.velocity = bird.lift;
+    flapSound.currentTime = 0; 
+    flapSound.play().catch(err => {
+        console.error('Erreur lors de la lecture du son :', err);
+    });
+
+    if (!gameStarted) {
+        gameStarted = true;
+        backgroundMusic.play().catch(err => {
+            console.error('Erreur lors de la lecture de la musique de fond :', err);
+        });
+    }
+});
+
 
 // Fonctionnalité Leaderboard mise à jour pour enregistrer le score du wallet connecté
 function submitScore(score) {
