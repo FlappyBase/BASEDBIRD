@@ -188,6 +188,26 @@ body {
     border-radius: 30px;
 }
 
+/* Ajustement du placement pour les appareils mobiles */
+@media only screen and (max-width: 600px) {
+    #connectWalletButton,
+    #leaderboardButton {
+        width: 80px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    #connectWalletButton {
+        top: 10px;
+        right: 10px;
+    }
+
+    #leaderboardButton {
+        top: 10px;
+        right: 100px; /* Positionné à gauche du bouton Connect */
+    }
+}
+
 .close {
     color: #aaa;
     float: right;
