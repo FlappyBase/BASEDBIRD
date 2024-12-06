@@ -75,8 +75,6 @@ function submitScore(score) {
         console.error('Aucune adresse de wallet connectée. Connectez votre wallet avant d\'enregistrer le score.');
         return;
     }
-
-    
 }
 
 // Fonction pour se connecter à MetaMask
@@ -100,9 +98,6 @@ connectButton.innerText = 'Connect';
 connectButton.id = 'connectWalletButton';
 connectButton.onclick = connectWallet;
 document.body.appendChild(connectButton);
-
-
-
 
 // Réinitialisation du jeu
 function resetGame() {
@@ -222,12 +217,13 @@ function drawBackground() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Animation des nuages
-    ctx.drawImage(cloudsImg, backgroundX, 50, canvas.width, 200);
-    ctx.drawImage(cloudsImg, backgroundX + canvas.width, 50, canvas.width, 200);
-    backgroundX -= 1;
+    backgroundX -= 0.5;
     if (backgroundX <= -canvas.width) {
         backgroundX = 0;
     }
+
+    ctx.drawImage(cloudsImg, backgroundX, 50, canvas.width, 200);
+    ctx.drawImage(cloudsImg, backgroundX + canvas.width, 50, canvas.width, 200);
 }
 
 // Dessiner le score
@@ -280,7 +276,7 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
-// Fonction pour générer un  leaderboard
+// Fonction pour générer un faux leaderboard
 function generateFakeLeaderboard() {
     const fakeScores = [];
     for (let i = 0; i < 5; i++) {
@@ -292,7 +288,7 @@ function generateFakeLeaderboard() {
     return fakeScores;
 }
 
-// Générer un leaderboard au démarrage du jeu
+// Générer un faux leaderboard au démarrage du jeu
 let fakeLeaderboard = generateFakeLeaderboard();
 
 // Mise à jour du leaderboard toutes les heures
@@ -311,7 +307,6 @@ function displayLeaderboard() {
     });
     alert(leaderboardContent); // Affiche une boîte de dialogue avec le leaderboard
 }
-
 
 // Initialisation
 resetGame();

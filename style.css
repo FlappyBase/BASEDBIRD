@@ -28,7 +28,7 @@ body {
     background: linear-gradient(to bottom, #87CEEB, #ffffff);
     background-image: url('clouds.png'); /* Ajoute une image de nuages */
     background-repeat: repeat-x;
-    background-size: cover;
+    background-size: auto 100%;
     animation: moveClouds 60s linear infinite; /* Animation du fond ralentie */
     z-index: 1; /* S'assurer que le canvas est derrière le bouton de démarrage */
 }
