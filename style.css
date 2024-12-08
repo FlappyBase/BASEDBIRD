@@ -1,6 +1,6 @@
-/* Mise à jour du fichier style.css */
 
-/* Assurer que le body et html prennent tout l'écran */
+
+
 html, body {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ html, body {
     overflow: hidden;
 }
 
-/* Supprimer toute marge ou espace supplémentaire */
+
 body {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body {
     height: 100%;
 }
 
-/* Canvas du jeu */
+
 #gameCanvas {
     display: block;
     position: absolute;
@@ -26,25 +26,25 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #87CEEB, #ffffff);
-    background-image: url('clouds.png'); /* Ajoute une image de nuages */
+    background-image: url('clouds.png'); 
     background-repeat: repeat-x;
     background-size: auto 100%;
-    animation: moveClouds 60s linear infinite; /* Animation du fond ralentie */
-    z-index: 1; /* S'assurer que le canvas est derrière le bouton de démarrage */
+    animation: moveClouds 60s linear infinite; 
+    z-index: 1; 
 }
 
 #playButton { 
-    background: linear-gradient(135deg, #1e4494, #4a69bd); /* Dégradé bleu pour un look plus moderne */
+    background: linear-gradient(135deg, #1e4494, #4a69bd); 
     border: none;
     color: white;
     padding: 20px 60px;
     font-size: 40px;
     cursor: pointer;
-    border-radius: 30px; /* Augmentation des coins arrondis pour un effet plus doux */
-    animation: pulse 5s infinite; /* Animation de pulsation légèrement plus rapide et douce */
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5); /* Ajoute une ombre plus prononcée pour un effet 3D */
-    transition: all 0.4s ease; /* Transition plus douce pour les interactions */
-    z-index: 10000; /* Assurer que le bouton est toujours en avant-plan */
+    border-radius: 30px; 
+    animation: pulse 5s infinite; 
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5); 
+    transition: all 0.4s ease; 
+    z-index: 10000; 
 }
 
 @keyframes pulse {
@@ -52,7 +52,7 @@ body {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.05); /* Légère augmentation de la taille */
+        transform: scale(1.05); 
     }
     100% {
         transform: scale(1);
@@ -60,12 +60,12 @@ body {
 }
 
 #playButton:hover {
-    background: linear-gradient(135deg, #006dff, #1e90ff); /* Change le dégradé lors du survol pour une meilleure visibilité */
-    transform: scale(1.1); /* Légère augmentation de la taille au survol */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Accentue l'ombre au survol pour donner plus de profondeur */
+    background: linear-gradient(135deg, #006dff, #1e90ff); 
+    transform: scale(1.1); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); 
 }
 
-/* Animation pour déplacer les nuages */
+
 @keyframes moveClouds {
     from {
         background-position: 0 0;
@@ -76,31 +76,31 @@ body {
 }
 
 #scoreDisplay {
-    font-family: 'Press Start 2P', cursive; /* Police pixelisée */
+    font-family: 'Press Start 2P', cursive; 
     font-weight: bold;
-    text-shadow: Opx 0px 0px rgba(0, 0, 0, 0.5); /* Ombre pour le texte */
-    transition: all 0.3s ease;  /* Animation douce */
-    color: black;  /* Couleur noire */
-    z-index: 12; /* Assure-toi que le score est au-dessus du canevas */
-    position: absolute; /* Pour que le score soit bien positionné par-dessus */
+    text-shadow: Opx 0px 0px rgba(0, 0, 0, 0.5); 
+    transition: all 0.3s ease;  
+    color: black;  
+    z-index: 12; 
+    position: absolute; 
     top: 20px;
-    left: 120px; /* Ajusté pour aligner avec le PNG du label Score */
+    left: 120px; 
 }
 
 #scoreValue {
-    font-family: 'Press Start 2P', sans-serif; /* Utilise une police pixelisée */
-    font-size: 40px; /* Ajustez la taille si nécessaire */
-    color: black; /* Couleur du score */
+    font-family: 'Press Start 2P', sans-serif; 
+    font-size: 40px; 
+    color: black; 
     font-weight: bold;
     position: absolute;
     top: 20px;
-    left: 130px; /* Ajuster la position pour qu'elle soit alignée avec l'image "Score" */
+    left: 130px; 
 }
 
 
 
 
-/* Style du label Score */
+
 #scoreContainer {
     position: absolute;
     top: 20px;
@@ -110,27 +110,27 @@ body {
 }
 
 #scoreLabel {
-    width: 80px; /* Ajuster la taille de l'image si nécessaire */
+    width: 80px; 
     height: auto;
-    margin-right: 10px; /* Espacement entre l'image et le score */
+    margin-right: 10px; 
 }
 
-/* Écran de démarrage */
+
 #gameStartScreen {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 9999; /* S'assurer que l'écran de démarrage est au-dessus de tout le reste */
+    z-index: 9999; 
 }
 
-/* Bouton Connect Wallet */
+
 #connectWalletButton {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #006dff; /* Bleu foncé */
+    background: #006dff; 
     border: none;
     color: white;
     padding: 15px 30px;
@@ -145,12 +145,12 @@ body {
     transform: scale(1.1);
 }
 
-/* Bouton Leaderboard */
+
 #leaderboardButton {
     position: absolute;
-    top: 20px; /* Placé sous le bouton Connect Wallet */
+    top: 20px; 
     right: 200px;
-    background: #006dff; /* Bleu foncé */
+    background: #006dff; 
     border: none;
     color: white;
     padding: 15px 30px;
@@ -165,17 +165,17 @@ body {
     transform: scale(1.1);
 }
 
-/* Styles pour le modal du leaderboard */
+
 .leaderboard-modal {
-    display: none; /* Par défaut, il est caché */
+    display: none; 
     position: fixed;
-    z-index: 20000; /* S'assurer que c'est au-dessus de tout le reste */
+    z-index: 20000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Fond noir semi-transparent */
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
 .leaderboard-content {
@@ -188,7 +188,7 @@ body {
     border-radius: 30px;
 }
 
-/* Ajustement du placement pour les appareils mobiles */
+
 @media only screen and (max-width: 600px) {
     #connectWalletButton,
     #leaderboardButton {
@@ -204,7 +204,7 @@ body {
 
     #leaderboardButton {
         top: 10px;
-        right: 100px; /* Positionné à gauche du bouton Connect */
+        right: 100px; 
     }
 }
 
